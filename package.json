@@ -1,0 +1,30 @@
+{
+  "name": "claude-design-system-deploy",
+  "version": "1.0.0",
+  "description": "Deploys a Claude Design System export to GitHub: tokens in every format, plus a docs site on GitHub Pages.",
+  "type": "module",
+  "main": "dist/tokens.cjs",
+  "module": "dist/tokens.js",
+  "types": "dist/tokens.d.ts",
+  "style": "dist/ds.css",
+  "exports": {
+    ".": {
+      "types": "./dist/tokens.d.ts",
+      "import": "./dist/tokens.js",
+      "require": "./dist/tokens.cjs"
+    },
+    "./css": "./dist/ds.css",
+    "./tokens.css": "./dist/tokens.css",
+    "./typography.css": "./dist/typography.css",
+    "./scss": "./dist/_tokens.scss",
+    "./dtcg": "./dist/tokens.dtcg.json",
+    "./assets/*": "./dist/assets/*"
+  },
+  "files": ["dist", "design-system"],
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "preview": "node scripts/build.mjs && npx --yes serve _site"
+  },
+  "engines": { "node": ">=18" },
+  "private": true
+}

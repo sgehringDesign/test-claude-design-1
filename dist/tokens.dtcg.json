@@ -1,0 +1,182 @@
+{
+  "color": {
+    "surface-100": {
+      "$type": "color",
+      "$value": "#f7f8f6",
+      "$description": "Page background."
+    },
+    "surface-200": {
+      "$type": "color",
+      "$value": "#eceeea",
+      "$description": "Cards, code blocks, subtle fills on surface-100."
+    },
+    "line": {
+      "$type": "color",
+      "$value": "#d4d8d3",
+      "$description": "Hairline borders and dividers. Decorative only, not for control borders."
+    },
+    "ink": {
+      "$type": "color",
+      "$value": "#15181a",
+      "$description": "Primary text on surface-100, surface-200 and accent."
+    },
+    "ink-muted": {
+      "$type": "color",
+      "$value": "#5a6166",
+      "$description": "Secondary text and captions on surface-100 (about 6:1)."
+    },
+    "brand": {
+      "$type": "color",
+      "$value": "#1f6f5c",
+      "$description": "Primary buttons, links, key highlights. White text on brand passes 4.5:1."
+    },
+    "brand-strong": {
+      "$type": "color",
+      "$value": "#164f42",
+      "$description": "Hover and pressed state for brand."
+    },
+    "accent": {
+      "$type": "color",
+      "$value": "#f2a93b",
+      "$description": "Deploy signal: in-progress badges, callouts. Use ink text on it, never white."
+    },
+    "danger": {
+      "$type": "color",
+      "$value": "#b42318",
+      "$description": "Failed deploys and destructive actions. White text on danger passes 4.5:1."
+    },
+    "on-brand": {
+      "$type": "color",
+      "$value": "#ffffff",
+      "$description": "Text and icons on brand and danger fills."
+    }
+  },
+  "fontFamily": {
+    "sans": {
+      "$type": "fontFamily",
+      "$value": "\"Space Grotesk\", system-ui, sans-serif"
+    },
+    "mono": {
+      "$type": "fontFamily",
+      "$value": "\"JetBrains Mono\", ui-monospace, monospace"
+    }
+  },
+  "typography": {
+    "display": {
+      "$type": "typography",
+      "$description": "Hero headlines only.",
+      "$value": {
+        "fontFamily": "{fontFamily.sans}",
+        "fontSize": "56px",
+        "fontWeight": 600,
+        "lineHeight": "60px",
+        "letterSpacing": "-0.02em"
+      }
+    },
+    "h1": {
+      "$type": "typography",
+      "$description": "Page titles.",
+      "$value": {
+        "fontFamily": "{fontFamily.sans}",
+        "fontSize": "36px",
+        "fontWeight": 600,
+        "lineHeight": "44px",
+        "letterSpacing": "0"
+      }
+    },
+    "h2": {
+      "$type": "typography",
+      "$description": "Section titles.",
+      "$value": {
+        "fontFamily": "{fontFamily.sans}",
+        "fontSize": "24px",
+        "fontWeight": 600,
+        "lineHeight": "32px",
+        "letterSpacing": "0"
+      }
+    },
+    "body": {
+      "$type": "typography",
+      "$description": "Default reading text.",
+      "$value": {
+        "fontFamily": "{fontFamily.sans}",
+        "fontSize": "16px",
+        "fontWeight": 400,
+        "lineHeight": "24px",
+        "letterSpacing": "0"
+      }
+    },
+    "small": {
+      "$type": "typography",
+      "$description": "Captions, helper text.",
+      "$value": {
+        "fontFamily": "{fontFamily.sans}",
+        "fontSize": "14px",
+        "fontWeight": 400,
+        "lineHeight": "20px",
+        "letterSpacing": "0"
+      }
+    },
+    "label": {
+      "$type": "typography",
+      "$description": "Badges, overlines, table headers. Uppercase.",
+      "$value": {
+        "fontFamily": "{fontFamily.sans}",
+        "fontSize": "12px",
+        "fontWeight": 600,
+        "lineHeight": "16px",
+        "letterSpacing": "0.04em"
+      }
+    },
+    "code": {
+      "$type": "typography",
+      "$description": "Commit hashes, logs, commands.",
+      "$value": {
+        "fontFamily": "{fontFamily.mono}",
+        "fontSize": "14px",
+        "fontWeight": 400,
+        "lineHeight": "20px",
+        "letterSpacing": "0"
+      }
+    }
+  },
+  "spacing": {
+    "space-2": {
+      "$type": "dimension",
+      "$value": "8px",
+      "$description": "Gaps inside controls, icon to label."
+    },
+    "space-4": {
+      "$type": "dimension",
+      "$value": "16px",
+      "$description": "Card padding, gaps between related items."
+    },
+    "space-6": {
+      "$type": "dimension",
+      "$value": "24px",
+      "$description": "Gaps between groups."
+    },
+    "space-10": {
+      "$type": "dimension",
+      "$value": "40px",
+      "$description": "Section spacing, page margins."
+    }
+  },
+  "radius": {
+    "radius-sm": {
+      "$type": "dimension",
+      "$value": "4px",
+      "$description": "Badges, inputs."
+    },
+    "radius-md": {
+      "$type": "dimension",
+      "$value": "8px",
+      "$description": "Buttons, cards."
+    },
+    "radius-lg": {
+      "$type": "dimension",
+      "$value": "16px",
+      "$description": "Modals, large panels."
+    }
+  }
+}

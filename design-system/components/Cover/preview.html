@@ -1,0 +1,42 @@
+<!-- @dsCard height=288 -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&display=swap">
+<style>
+  html, body { margin: 0; }
+  .cover { position: relative; width: 960px; height: 288px; background: var(--surface-100); overflow: hidden; font-family: var(--font-sans); }
+  .cover svg { position: absolute; left: 0; top: 0; }
+  .brand { fill: var(--brand); }
+  .ink { fill: var(--ink); }
+  .accent { fill: var(--accent); }
+  .tint { fill: var(--surface-200); }
+  .dot { fill: var(--accent); }
+  .text { position: absolute; left: 40px; bottom: 32px; max-width: 440px; }
+  .name { margin: 0; font-size: 96px; line-height: .95; font-weight: 600; letter-spacing: -0.02em; color: var(--ink); }
+  .tag { margin: 16px 0 0; font-size: 14px; line-height: 20px; color: var(--ink-muted); }
+</style>
+<div class="cover">
+  <svg width="960" height="288" viewBox="0 0 960 288" aria-hidden="true">
+    <!--
+      blocks: brand 240x288 slab, ink 240x160, accent 160x128, surface-200 80x128 (sides in space-10/space-4 multiples)
+      arrangement: one tall slab with satellites, flush modular grid bleeding off top, right and bottom
+      pattern: dot grid, "a calm, technical brand ... precise" -> precise/technical row; accent dots on brand
+      scales: pitch space-10 (40px), dot inset space-4 (16px), radius none (mostly square system)
+    -->
+    <rect class="brand" x="480" y="0" width="240" height="288"/>
+    <rect class="ink" x="720" y="0" width="240" height="160"/>
+    <rect class="accent" x="720" y="160" width="160" height="128"/>
+    <rect class="tint" x="880" y="160" width="80" height="128"/>
+    <g id="dots"></g>
+  </svg>
+  <div class="text">
+    <h1 class="name">Test<br>Deploy</h1>
+    <p class="tag">Ship it, see it, trust it.</p>
+  </div>
+</div>
+<script>
+  const g = document.getElementById('dots'), ns = 'http://www.w3.org/2000/svg';
+  for (let c = 0; c < 6; c++) for (let r = 0; r < 7; r++) {
+    const d = document.createElementNS(ns, 'circle');
+    d.setAttribute('class', 'dot'); d.setAttribute('cx', 500 + c * 40); d.setAttribute('cy', 24 + r * 40); d.setAttribute('r', 2.5);
+    g.appendChild(d);
+  }
+</script>
